@@ -1,0 +1,19 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "ignoreRegExpList": [
+    "/[\\u0600-\\u06FF]+/g"
+  ],
+  "words": [
+    "bidi",
+    "Contentful",
+    "crawlable",
+    "HVAC",
+    "lightbox",
+    "solb",
+    "Swipeable",
+    "Tajawal",
+    "wordmark",
+    "wordmarks"
+  ]
+}

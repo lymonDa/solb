@@ -1,0 +1,15 @@
+export const SITE = {
+  domain: "https://solb.site",
+  brandNameAr: "صلب",
+  brandNameEn: "SOLB",
+  brandFullNameAr: "صلب | قص وتخريم الخرسانة بالرياض",
+  brandFullNameEn: "SOLB | Concrete Cutting & Core Drilling in Riyadh",
+  phoneDisplay: "+966 55 612 3725",
+  phoneRaw: "+966556123725",
+  phoneHref: "tel:+966556123725",
+  whatsappHref: "https://wa.me/966556123725",
+  serviceAreaAr: "مدينة الرياض، المملكة العربية السعودية",
+  serviceAreaEn: "Riyadh, Saudi Arabia",
+  taglineAr: "قص دقيق. تخريم احترافي. تنفيذ بثقة.",
+  taglineEn: "Precision Cutting. Professional Coring. Built on Confidence.",
+} as const;

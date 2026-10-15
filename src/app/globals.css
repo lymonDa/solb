@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme {
+  --color-graphite: #202830;
+  --color-yellow: #F2BE3D;
+  --color-engineering-yellow: #F2BE3D;
+  --color-offwhite: #F5F6F4;
+  --color-off-white: #F5F6F4;
+  --color-steel: #354A59;
+  --color-steel-blue: #354A59;
+  --color-pure-white: #FFFFFF;
+  --color-surface: #111413;
+  --color-surface-dim: #111413;
+  --color-surface-container: #1d201f;
+  --color-surface-container-high: #282a2a;
+  --color-surface-container-highest: #333534;
+  --color-surface-container-low: #191c1b;
+  --color-surface-container-lowest: #0c0f0e;
+  --color-on-surface: #e2e3e1;
+  --color-on-surface-variant: #c3c7cc;
+  --color-outline: #8d9196;
+  --color-outline-variant: #43474b;
+  --color-primary-container: #354A59;
+
+  --font-sans: var(--font-arabic), var(--font-latin), system-ui, sans-serif;
+  --font-arabic: var(--font-arabic), 'IBM Plex Sans Arabic', 'Cairo', sans-serif;
+  --font-latin: var(--font-latin), 'Inter', system-ui, sans-serif;
+  --font-headline: var(--font-headline), 'Manrope', system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  body {
+    background-color: var(--color-graphite);
+    color: var(--color-on-surface);
+    margin: 0;
+    padding: 0;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* Strict focus outline model conforming to DESIGN.md */
+  :focus-visible {
+    outline: 2px solid var(--color-engineering-yellow);
+    outline-offset: 2px;
+  }
+}
+
+/* Custom details accordion chevron animation without external JS */
+details summary::-webkit-details-marker {
+  display: none;
+}
+details > summary {
+  list-style: none;
+}
+details[open] summary .faq-icon {
+  transform: rotate(180deg);
+}
+
+/* Safe area utilities */
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Industrial Grid Watermark */
+.bg-grid-watermark {
+  background-image: radial-gradient(#F5F6F4 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.bg-grid-watermark-dense {
+  background-image: linear-gradient(rgba(245, 246, 244, 0.04) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(245, 246, 244, 0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
